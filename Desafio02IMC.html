@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            // Essa função serve para quando chamar ela ja efetuar a conta, de acordo com os parâmetros.
+            
+            function calcularIMC(peso, altura){
+                return peso/ (altura * altura);
+            }
+
+           
+            function ClassificarIMC(imc){
+
+            if(imc < 18.5){
+                return'Você esta a baixo do Peso!';
+
+            }else if(imc >= 18.5 && imc < 25){
+                return'Você está no Peso Normal!';
+
+            }else if( imc >= 25 && imc <30){
+                return'Você esta Acima do Peso!';
+
+            }else if( imc >= 30 && imc <40){
+                return'Você esta Obeso!';
+
+            }else{
+                return'Você esta com Obesidade Grave!';
+
+                }
+            }
+
+            peso = 78;
+            altura = 1.60;
+            const imc = calcularIMC(peso, altura);
+            console.log(ClassificarIMC(imc));
+
+        </script>
+    </body>
+</html>

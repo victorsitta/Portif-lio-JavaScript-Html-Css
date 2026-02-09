@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+            /*
+            CÓDIGO CONDIÇÃO DE PAGAMENTO:
+            1- À VISTA DÉBITO, RECEBE 10% DE DESCONTO (1).
+            2- À VISTA NO DINHEIRO OU PIX, RECEBE 15% DE DESCONTO (2).
+            3- EM DUAS VEZES, PREÇO NORMAL DE ETIQUETA SEM JUROS (3).
+            4- ACIMA DE DUAS VEZES, PREÇO NORMAL DE ETIQUETA MAIS JUROS DE 10% (4).
+            */
+
+            function aplicarDesconto(valor, desconto){
+                return (valor - (valor * desconto));
+            }
+
+            function aplicarJuros(valor, juros){
+                return (valor + (valor *juros));
+            }
+
+
+            const produto = 100;
+            const escolha = 4;
+
+            if(escolha == 1){
+                console.log(aplicarDesconto(produto,0.1));
+
+            }else if(escolha == 2){
+                console.log(aplicarDesconto(produto,0.15));
+
+            }else if(escolha == 3){
+                console.log(aplicarDesconto(produto,0));
+
+            }else if(escolha == 4){
+                console.log(aplicarJuros(produto,0.1));
+
+            }
+        </script>
+     </body>
+</html>
